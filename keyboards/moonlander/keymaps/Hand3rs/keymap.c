@@ -133,57 +133,61 @@ extern rgb_config_t rgb_matrix_config;
 void keyboard_post_init_user(void) {
   rgb_matrix_enable();
 }
-typedef struct {
-    uint8_t R;
-    uint8_t G;
-    uint8_t B;
-} color;
 
-#define white 255, 255, 255
+#define white__ 255, 255, 255
+#define black__ 0, 0, 0
+#define red____ 255, 0, 0
+#define green__ 0, 255, 0
+#define blue___ 0, 0, 255
+#define yellow_ 255, 255, 0
+#define magenta 255, 0, 255
+#define cyan___ 0, 255, 255
+#define orange_ 255, 88, 0
+#define brown__ 150, 50, 0
 
 const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
     [BASE] = {
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},                                                                   {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},                        {white},                                   {white},                        {white},        {white},        {white},        {white},        {white},
-                                                                       {white},        {white},        {white},                                   {white},        {white},        {white}
+    {white__},     {white__},      {white__},      {white__},      {white__},      {white__},      {white__},                             {white__},      {white__},      {white__},      {white__},      {white__},      {white__},      {white__},
+    {white__},     {white__},      {white__},      {white__},      {white__},      {white__},      {white__},                             {white__},      {white__},      {white__},      {white__},      {white__},      {white__},      {white__},
+    {white__},     {white__},      {white__},      {white__},      {white__},      {white__},      {white__},                             {white__},      {white__},      {white__},      {white__},      {white__},      {white__},      {white__},
+    {white__},     {white__},      {white__},      {white__},      {white__},      {white__},                                                             {white__},      {white__},      {white__},      {white__},      {white__},      {white__},
+    {white__},     {white__},      {white__},      {white__},      {white__},                      {white__},                             {white__},                      {white__},      {white__},      {white__},      {white__},      {white__},
+                                                                   {white__},      {white__},      {white__},                             {white__},      {white__},      {white__}
     },
     [SYMB] = {
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},                                                                   {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},                        {white},                                   {white},                        {white},        {white},        {white},        {white},        {white},
-                                                                       {white},        {white},        {white},                                   {white},        {white},        {white}
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},                                                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},                      {black__},                             {black__},                      {black__},      {black__},      {black__},      {black__},      {black__},
+                                                                   {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
     },
     [MDIA] = {
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},                                                                   {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},                        {white},                                   {white},                        {white},        {white},        {white},        {white},        {white},
-                                                                       {white},        {white},        {white},                                   {white},        {white},        {white}
+    {blue___},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {magenta},
+    {blue___},     {black__},      {black__},      {yellow_},      {black__},      {black__},      {black__},                             {black__},      {black__},      {red____},      {black__},      {black__},      {black__},      {black__},
+    {blue___},     {black__},      {yellow_},      {yellow_},      {yellow_},      {black__},      {black__},                             {black__},      {red____},      {black__},      {black__},      {red____},      {black__},      {red____},
+    {red____},     {black__},      {black__},      {black__},      {black__},      {black__},                                                             {black__},      {black__},      {red____},      {red____},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {yellow_},      {yellow_},                      {yellow_},                             {black__},                      {red____},      {red____},      {red____},      {black__},      {black__},
+                                                                   {yellow_},      {yellow_},      {black__},                             {black__},      {black__},      {red____}
     },
     [WARP] = {
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},                                                                   {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},                        {white},                                   {white},                        {white},        {white},        {white},        {white},        {white},
-                                                                       {white},        {white},        {white},                                   {white},        {white},        {white}
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {red____},      {red____},      {red____},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},      {black__},                                                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {black__},     {black__},      {black__},      {black__},      {black__},                      {black__},                             {black__},                      {black__},      {black__},      {black__},      {black__},      {black__},
+                                                                   {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
     },
     [GW2] = {
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},        {white},                                   {white},        {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},        {white},                                                                   {white},        {white},        {white},        {white},        {white},        {white},
-    {white},           {white},        {white},        {white},        {white},                        {white},                                   {white},                        {white},        {white},        {white},        {white},        {white},
-                                                                       {white},        {white},        {white},                                   {white},        {white},        {white}
+    {brown__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {red____},
+    {brown__},     {white__},      {red____},      {red____},      {red____},      {red____},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {yellow_},     {red____},      {green__},      {orange_},      {green__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {magenta},     {magenta},      {orange_},      {orange_},      {orange_},      {orange_},                                                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {magenta},     {red____},      {black__},      {black__},      {black__},                      {black__},                             {black__},                      {black__},      {black__},      {black__},      {black__},      {black__},
+                                                                   {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
     }
 };
-const int LED_moonlander_map[72] = {0, 14, 28, 42, 54, 1, 15, 29, 43, 55, 2, 16, 30, 44, 56, 3, 17, 31, 45, 57, 4, 18, 32, 46, 58, 5, 19, 33, 47, 6, 20, 34, 66, 67, 68, 59, 13, 27, 41, 53, 65, 12, 26, 40, 52, 64, 11, 25, 39, 51, 63, 10, 24, 38, 50, 62, 9, 23, 37, 49, 61, 8, 22, 36, 48, 7, 21, 35, 71, 70, 69, 60};
+const int LED_moonlander_map[72] = {0, 5, 10, 15, 20, 25, 29, 65, 61, 56, 51, 46, 41, 36, 1, 6, 11, 16, 21, 26, 30, 66, 62, 57, 52, 47, 42, 37, 2, 7, 12, 17, 22, 27, 31, 67, 63, 58, 53, 48, 43, 38, 3, 8, 13, 18, 23, 28, 64, 59, 54, 49, 44, 39, 4, 9, 14, 19, 24, 35, 71, 60, 55, 50, 45, 40, 32, 33, 34, 70, 69, 68};
 
 void set_layer_color(int layer) {
   for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
