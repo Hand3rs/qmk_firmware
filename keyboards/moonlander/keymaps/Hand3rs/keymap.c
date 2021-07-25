@@ -86,44 +86,44 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_moonlander(
-    KC_EQUAL,            KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_LEFT,                              TD(DANCE_5),      KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
-    KC_DELETE,           KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TG(SYMB),                             TG(1),            KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
-    KC_TAB,              KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           LT(WARP,KC_NO),                       KC_MEH,           KC_H,           KC_J,           KC_K,           KC_L,           TD(DANCE_3),    LGUI_T(KC_QUOTE),
-    KC_LSHIFT,           LCTL_T(KC_Z),   KC_X,           KC_C,           KC_V,           KC_B,                                                 KC_N,             KC_M,           KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RSHIFT,
-    LT(SYMB,KC_GRAVE),   WEBUSB_PAIR,    LALT(KC_LSHIFT),TD(DANCE_0),    TD(DANCE_1),    KC_LCTRL,                                             LCTL_T(KC_ESCAPE),KC_UP,          KC_DOWN,        KC_LBRACKET,    KC_RBRACKET,    MO(SYMB),
-                                                                         KC_SPACE,       KC_BSPACE,      TD(DANCE_2),                          KC_LALT,          KC_TAB,         KC_ENTER
+    KC_EQUAL,            KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           KC_LEFT,                        TD(DANCE_5),      KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,
+    KC_DELETE,           KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           TG(SYMB),                       TG(1),            KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLASH,
+    KC_TAB,              KC_A,           KC_S,           KC_D,           KC_F,           KC_G,           LT(WARP,KC_NO),                 KC_MEH,           KC_H,           KC_J,           KC_K,           KC_L,           TD(DANCE_3),    LGUI_T(KC_QUOTE),
+    KC_LSHIFT,           LCTL_T(KC_Z),   KC_X,           KC_C,           KC_V,           KC_B,                                                             KC_N,           KC_M,           KC_COMMA,       KC_DOT,         TD(DANCE_4),    KC_RSHIFT,
+    LT(SYMB,KC_GRAVE),   _______,        KC_LALT,        TD(DANCE_0),    TD(DANCE_1),                    KC_LCTRL,                       LCTL_T(KC_ESCAPE),                KC_UP,          KC_DOWN,        KC_LBRACKET,    KC_RBRACKET,    MO(SYMB),
+                                                                         KC_SPACE,       KC_BSPACE,      TD(DANCE_2),                    KC_LALT,          KC_TAB,         KC_ENTER
   ),
   [SYMB] = LAYOUT_moonlander(
-    KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          _______,                                   _______,        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
-    _______,        KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        _______,                                   _______,        KC_UP,          KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
-    _______,        KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,       _______,                                   _______,        KC_DOWN,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     _______,
-    _______,        KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,                                                   KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      _______,
-    _______,        KC_COMMA,       HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,RGB_MOD,                                                   RGB_TOG,        _______,        KC_DOT,         KC_0,           KC_EQUAL,       _______,
-                                                                    RGB_VAD,        RGB_VAI,        TOGGLE_LAYER_COLOR,                        RGB_SLD,        RGB_HUD,        RGB_HUI
+    KC_ESCAPE,      KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          _______,                             _______,        KC_F6,          KC_F7,          KC_F8,          KC_F9,          KC_F10,         KC_F11,
+    _______,        KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        _______,                             _______,        KC_UP,          KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
+    _______,        KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,       _______,                             _______,        KC_DOWN,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     _______,
+    _______,        KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,                                                             KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      _______,
+    _______,        KC_COMMA,       HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                             RGB_TOG,                        _______,        KC_DOT,         KC_0,           KC_EQUAL,       _______,
+                                                                    RGB_VAD,        RGB_VAI,        TOGGLE_LAYER_COLOR,                  RGB_SLD,        RGB_HUD,        RGB_HUI
   ),
   [MDIA] = LAYOUT_moonlander(
-    AU_TOG,         _______,        _______,        _______,        _______,        _______,        _______,                                   _______,     _______,          _______,              _______,              _______,           _______,   RESET,
-    MU_TOG,         _______,        _______,        KC_MS_UP,       _______,        KC_MS_WH_UP,    _______,                                   _______,     _______,          KC_END,               _______,              _______,           _______,   _______,
-    MU_MOD,         _______,        KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_MS_WH_DOWN,  _______,                                   _______,     KC_HOME,          _______,              _______,              LCTL(KC_PSCREEN),  _______,   KC_MEDIA_PLAY_PAUSE,
-    KC_CAPSLOCK,    _______,        _______,        _______,        _______,        _______,                                                   _______,      _______,         KC_MEDIA_PREV_TRACK,  KC_MEDIA_NEXT_TRACK,  _______,           _______,
-    _______,        _______,        _______,        KC_MS_BTN1,     KC_MS_BTN2,     KC_MS_BTN3,                                                _______,     KC_AUDIO_VOL_UP,  KC_AUDIO_VOL_DOWN,    KC_AUDIO_MUTE,        _______,           _______,
-                                                                    KC_MS_BTN1,     KC_MS_BTN2,     _______,                                   _______,      _______,         KC_WWW_BACK
+    AU_TOG,         _______,        _______,        _______,        _______,        _______,        _______,                             _______,     _______,          _______,              _______,              _______,              _______,   RESET,
+    MU_TOG,         _______,        _______,        KC_MS_UP,       _______,        KC_MS_WH_UP,    _______,                             _______,     _______,          KC_END,               _______,              _______,              _______,   _______,
+    MU_MOD,         _______,        KC_MS_LEFT,     KC_MS_DOWN,     KC_MS_RIGHT,    KC_MS_WH_DOWN,  _______,                             _______,     KC_HOME,          _______,              _______,              LCTL(KC_PSCREEN),     _______,   KC_MEDIA_PLAY_PAUSE,
+    KC_CAPSLOCK,    _______,        _______,        _______,        _______,        _______,                                                          _______,          _______,              KC_MEDIA_PREV_TRACK,  KC_MEDIA_NEXT_TRACK,  _______,   _______,
+    WEBUSB_PAIR,    _______,        _______,        KC_MS_BTN1,     KC_MS_BTN2,                     KC_MS_BTN3,                          _______,                       KC_AUDIO_VOL_UP,      KC_AUDIO_VOL_DOWN,    KC_AUDIO_MUTE,        _______,   _______,
+                                                                    KC_MS_BTN1,     KC_MS_BTN2,     _______,                             _______,     _______,          KC_WWW_BACK
   ),
   [WARP] = LAYOUT_moonlander(
-    _______,        _______,        _______,        _______,        _______,        _______,        _______,                                   _______,        _______,        _______,        _______,        _______,        _______,        _______,
-    _______,        _______,        KC_E,           _______,        _______,        _______,        _______,                                   _______,        _______,        _______,        _______,        _______,        _______,        _______,
-    _______,        _______,        _______,        _______,        TO(BASE),       TO(GW2),        _______,                                   _______,        _______,        _______,        _______,        _______,        _______,        _______,
-    KC_CAPSLOCK,    _______,        _______,        _______,        _______,        _______,                                                   _______,        _______,        _______,        _______,        _______,        _______,
-    _______,        _______,        _______,        _______,        _______,        _______,                                                   _______,        _______,        _______,        _______,        _______,        _______,
-                                                                    _______,        _______,        _______,                                   _______,        _______,        _______
+    _______,        _______,        _______,        _______,        _______,        _______,        _______,                             _______,        _______,        _______,        _______,        _______,        _______,        _______,
+    _______,        _______,        KC_E,           _______,        _______,        _______,        _______,                             _______,        _______,        _______,        _______,        _______,        _______,        _______,
+    _______,        _______,        _______,        _______,        TO(BASE),       TO(GW2),        _______,                             _______,        _______,        _______,        _______,        _______,        _______,        _______,
+    KC_CAPSLOCK,    _______,        _______,        _______,        _______,        _______,                                                             _______,        _______,        _______,        _______,        _______,        _______,
+    _______,        _______,        _______,        _______,        _______,                        _______,                             _______,                        _______,        _______,        _______,        _______,        _______,
+                                                                    _______,        _______,        _______,                             _______,        _______,        _______
   ),
   [GW2] = LAYOUT_moonlander(
-    KC_O,           _______,        _______,        _______,        _______,        _______,        _______,                                   KC_ESCAPE,      _______,        _______,        _______,        _______,        _______,        TO(BASE),
-    KC_H,           KC_GRAVE,       KC_2,           KC_3,           KC_4,           KC_5,           _______,                                   _______,        _______,        _______,        _______,        KC_O,           _______,        _______,
-    KC_0,           KC_TAB,         KC_1,           KC_W,           KC_X,           _______,        KC_M,                                      _______,        KC_H,           _______,        _______,        _______,        _______,        _______,
-    KC_9,           KC_8,           KC_A,           KC_S,           KC_D,           KC_F,                                                      _______,        _______,        KC_COMMA,       _______,        _______,        _______,
-    KC_7,           KC_6,           _______,        _______,        _______,        _______,                                                   _______,        _______,        _______,        _______,        _______,        _______,
-                                                                    _______,        _______,        _______,                                   _______,        _______,        _______
+    KC_O,           _______,        _______,        _______,        _______,        _______,        _______,                             KC_ESCAPE,      _______,        _______,        _______,        _______,        _______,        TO(BASE),
+    KC_H,           KC_GRAVE,       _______,        KC_2,           KC_3,           KC_4,           _______,                             _______,        _______,        _______,        _______,        KC_O,           _______,        _______,
+    KC_0,           KC_TAB,         KC_1,           KC_W,           KC_X,           KC_5,           KC_M,                                KC_G,           KC_H,           _______,        _______,        _______,        _______,        _______,
+    KC_9,           KC_8,           KC_A,           KC_S,           KC_D,           KC_F,                                                                _______,        _______,        KC_COMMA,       _______,        _______,        _______,
+    KC_7,           KC_6,           _______,        _______,        _______,                        _______,                             _______,                        _______,        _______,        _______,        _______,        _______,
+                                                                    _______,        _______,        _______,                             _______,        _______,        _______
   ),
 };
 
@@ -179,9 +179,9 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
                                                                    {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
     },
     [GW2] = {
-    {brown__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {red____},
-    {brown__},     {white__},      {red____},      {red____},      {red____},      {red____},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
-    {yellow_},     {red____},      {green__},      {orange_},      {green__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {brown__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {magenta},
+    {brown__},     {white__},      {black__},      {red____},      {red____},      {red____},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
+    {yellow_},     {green__},      {red____},      {orange_},      {green__},      {red____},      {white__},                             {brown__},      {brown__},      {black__},      {black__},      {black__},      {black__},      {black__},
     {magenta},     {magenta},      {orange_},      {orange_},      {orange_},      {orange_},                                                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
     {magenta},     {red____},      {black__},      {black__},      {black__},                      {black__},                             {black__},                      {black__},      {black__},      {black__},      {black__},      {black__},
                                                                    {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
