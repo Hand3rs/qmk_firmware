@@ -1,30 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
-#include "keymap_german.h"
-#include "keymap_nordic.h"
 #include "keymap_french.h"
-#include "keymap_spanish.h"
-#include "keymap_hungarian.h"
-#include "keymap_swedish.h"
-#include "keymap_br_abnt2.h"
-#include "keymap_canadian_multilingual.h"
-#include "keymap_german_ch.h"
-#include "keymap_jp.h"
-#include "keymap_korean.h"
 #include "keymap_bepo.h"
-#include "keymap_italian.h"
-#include "keymap_slovenian.h"
-#include "keymap_lithuanian_azerty.h"
-#include "keymap_danish.h"
-#include "keymap_norwegian.h"
-#include "keymap_portuguese.h"
-#include "keymap_contributions.h"
-#include "keymap_czech.h"
-#include "keymap_romanian.h"
-#include "keymap_russian.h"
-#include "keymap_uk.h"
-#include "keymap_estonian.h"
-#include "keymap_belgian.h"
 #include "keymap_us_international.h"
 
 #include "song_list.h"
@@ -98,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,        KC_EXLM,        KC_AT,          KC_LCBR,        KC_RCBR,        KC_PIPE,        _______,                             _______,        KC_UP,          KC_7,           KC_8,           KC_9,           KC_ASTR,        KC_F12,
     _______,        KC_HASH,        KC_DLR,         KC_LPRN,        KC_RPRN,        KC_GRAVE,       _______,                             _______,        KC_DOWN,        KC_4,           KC_5,           KC_6,           KC_KP_PLUS,     _______,
     _______,        KC_PERC,        KC_CIRC,        KC_LBRACKET,    KC_RBRACKET,    KC_TILD,                                                             KC_AMPR,        KC_1,           KC_2,           KC_3,           KC_BSLASH,      _______,
-    _______,        KC_COMMA,       HSV_0_255_255,  HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                             RGB_TOG,                        _______,        KC_DOT,         KC_0,           KC_EQUAL,       _______,
+    _______,        KC_COMMA,       KC_LCTRL,       HSV_86_255_128, HSV_172_255_255,                RGB_MOD,                             RGB_TOG,                        _______,        KC_DOT,         KC_0,           KC_EQUAL,       _______,
                                                                     RGB_VAD,        RGB_VAI,        TOGGLE_LAYER_COLOR,                  RGB_SLD,        RGB_HUD,        RGB_HUI
   ),
   [MDIA] = LAYOUT_moonlander(
@@ -118,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                     _______,        _______,        _______,                             _______,        _______,        _______
   ),
   [GW2] = LAYOUT_moonlander(
-    KC_O,           _______,        _______,        _______,        _______,        _______,        _______,                             KC_ESCAPE,      _______,        _______,        _______,        _______,        _______,        TO(BASE),
+    KC_O,           _______,        KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,                               KC_ESCAPE,      _______,        _______,        _______,        _______,        _______,        TO(BASE),
     KC_H,           KC_GRAVE,       _______,        KC_2,           KC_3,           KC_4,           _______,                             _______,        _______,        _______,        _______,        KC_O,           _______,        _______,
     KC_0,           KC_TAB,         KC_1,           KC_W,           KC_X,           KC_5,           KC_M,                                KC_G,           KC_H,           _______,        _______,        _______,        _______,        _______,
     KC_9,           KC_8,           KC_A,           KC_S,           KC_D,           KC_F,                                                                _______,        _______,        KC_COMMA,       _______,        _______,        _______,
@@ -179,7 +156,7 @@ const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
                                                                    {black__},      {black__},      {black__},                             {black__},      {black__},      {black__}
     },
     [GW2] = {
-    {brown__},     {black__},      {black__},      {black__},      {black__},      {black__},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {magenta},
+    {brown__},     {black__},      {magenta},      {magenta},      {magenta},      {magenta},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {magenta},
     {brown__},     {white__},      {black__},      {red____},      {red____},      {red____},      {black__},                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
     {yellow_},     {green__},      {red____},      {orange_},      {green__},      {red____},      {white__},                             {brown__},      {brown__},      {black__},      {black__},      {black__},      {black__},      {black__},
     {magenta},     {magenta},      {orange_},      {orange_},      {orange_},      {orange_},                                                             {black__},      {black__},      {black__},      {black__},      {black__},      {black__},
